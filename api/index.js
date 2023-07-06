@@ -14,6 +14,9 @@ import relationshipRoutes from './routes/relationships.js'
 import uploadRoutes from './routes/upload.js'
 import userRoutes from './routes/users.js'
 
+import { PrismaClient } from '@prisma/client'
+export const prisma = new PrismaClient()
+
 const PORT = process.env.PORT || 8282
 
 const app = express()

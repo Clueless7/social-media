@@ -1,8 +1,7 @@
-import { PrismaClient } from '@prisma/client'
-import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
+import jwt from 'jsonwebtoken'
 
-const prisma = new PrismaClient()
+import { prisma } from '../index.js'
 
 export const getUser = async (req, res) => {
   const { profileId } = req.query
